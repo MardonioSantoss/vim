@@ -1,16 +1,19 @@
 " ~/.vimrc
+
+" config Powerline
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup
 
 set laststatus=2
-
+" Config Editor
 syntax on
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 
 
+" Gerenciador de plugins
 call plug#begin('~/.vim/plugged')
 
 " vim closetag
@@ -45,6 +48,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
+" Config Lints
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   'python': [
@@ -54,6 +58,8 @@ let g:ale_fixers = {
 \       'trim_whitespace'
 \   ]
 \}
+
+" Themas e Editor
 
 " let colorscheme = "dracula"
 " let colorscheme_bg = "dark"
